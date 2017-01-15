@@ -32,7 +32,7 @@ app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
 // Mongoose & Database
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://sabriele:password@ds111489.mlab.com:11489/yelp_camp_270789");
 
 // Bodyparser & Method Override
 app.use(bodyParser.urlencoded({ extended: true })); /* Always placed ahead of routes */
