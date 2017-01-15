@@ -32,7 +32,8 @@ app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
 // Mongoose & Database
-mongoose.connect("mongodb://sabriele:password@ds111489.mlab.com:11489/yelp_camp_270789");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(url);
 
 // Bodyparser & Method Override
 app.use(bodyParser.urlencoded({ extended: true })); /* Always placed ahead of routes */
@@ -64,7 +65,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 /************/
 /*  SERVER  */
 /************/
-var PORT_NUM         = process.env.PORT;
+var PORT_NUM         = process.env.PORT || 3000;
 var SERVER_START_MSG = "> Server is up and running on Port " + PORT_NUM + "!";
 
 app.listen(PORT_NUM, function () {
