@@ -64,7 +64,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 /************/
 /*  SERVER  */
 /************/
-var PORT_NUM         = 3000;
+var PORT_NUM         = process.env.PORT;
 var SERVER_START_MSG = "> Server is up and running on Port " + PORT_NUM + "!";
 
 app.listen(PORT_NUM, function () {
