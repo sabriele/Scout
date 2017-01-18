@@ -1,10 +1,61 @@
-<% include ./partials/header %>
+<!DOCTYPE html>
+<html lang="en">
 
-<% include ./partials/navbar %>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>YelpCamp</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="/stylesheets/home.css" rel="stylesheet" type="text/css">
+		<link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAvQhWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAERERERERAAAREREBEREAABEREAARERABEREAAAEREAEREAAAABEREREQAAAAEREREQAAAAABEREQAAAAAAERERAAAAAAABERAAAAAAAAEREAAAAAAAABEAAAAAAAABERAAAAAAABEAEQAAD//wAA//8AAAPAAAADwAAAg8EAAMGDAADhhwAA8AcAAPAPAAD4HwAA+B8AAPw/AAD8PwAA/n8AAPw/AAD5nwAA" rel="icon" type="image/x-icon" />
+	</head>
 
-<div class="container">
-	<h1>Welcome!</h1>
-	<p class="lead">Check out more campgrounds <a href="/campgrounds">here</a>.</p>
-</div>
+	<body>
+		<div class="container">
+			<% include ./partials/alerts %>
+		</div>
+
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="cover-container">
+					<div class="masthead clearfix">
+						<div class="inner">
+							<h3 class="masthead-brand"><i class="fa fa-hacker-news fa-lg" aria-hidden="true"></i> elpCamp</h3>
+							<nav>
+								<ul class="nav masthead-nav">
+									<li class="active"><a href="#">Home</a></li>
+									<li><a href="#">Features</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+					<div class="inner cover">
+						<h1 class="cover-heading">Welcome to YelpCamp.</h1>
+						<p class="lead">YelpCamp is the best way to find exciting campgrounds from all over the world. Are you ready to go on your next great adventure?</p>
+						<p class="lead">
+							<a href="/campgrounds" class="btn btn-lg btn-default">Get started</a>
+						</p>
+					</div>
+
+					<div class="mastfoot">
+						<div class="inner">
+						<p>Made with love by <a href="https://github.com/sabriele">@sabriele</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul class="slideshow">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 
 <% include ./partials/footer %>
