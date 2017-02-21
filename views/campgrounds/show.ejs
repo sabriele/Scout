@@ -7,9 +7,8 @@
 		<div class="col-md-3">
 			<p class="lead">Menu</p>
 			<div class="list-group">
-				<li class="list-group-item active">Info 1</li>
-				<li class="list-group-item">Info 2</li>
-				<li class="list-group-item">Info 3</li>
+				<li class="list-group-item active">Details</li>
+				<li class="list-group-item">Location</li>
 			</div>
 		</div>
 		<div class="col-md-9">
@@ -39,6 +38,8 @@
 
 			<div class="well">
 				<!-- 2. New Comment -->
+				<h3>Reviews</h3>
+				<% if (currentUser) { %>
 				<form class="form-horizontal" action="/campgrounds/<%= campground._id %>/comments" method="POST">
 					<div class="form-group">
 						<div class="col-sm-12">
@@ -53,6 +54,12 @@
 						</div>
 					</div>
 				</form>
+				<% } else { %>
+  				<div class="col-md-12 text-center">
+					<a href="/login" class="btn btn-primary">Log in to leave a review!</a>
+				</div>
+				<br><br>
+				<% } %>
 				<!-- End 2. New Comment -->
 				<hr>
 				<!-- 4. Show Comment -->
